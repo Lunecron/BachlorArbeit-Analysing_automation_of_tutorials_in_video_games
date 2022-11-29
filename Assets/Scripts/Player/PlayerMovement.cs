@@ -99,8 +99,8 @@ public class PlayerMovement : MonoBehaviour
         air,
         swinging
     }
-    
-    // Start is called before the first frame update
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -383,7 +383,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool CanSwing()
     {
-        if (activeGrapple)
+        if (activeGrapple || swinging)
         {
             return false;
         }
@@ -392,7 +392,7 @@ public class PlayerMovement : MonoBehaviour
 
     public bool CanGrapple()
     {
-        if (swinging)
+        if (activeGrapple || swinging )
         {
             return false;
         }
@@ -528,6 +528,8 @@ public class PlayerMovement : MonoBehaviour
             GetComponent<Grappling>().StopGrapple();
         }
     }
+
+    
 
     // Calculate Forward Direction On Slopes/Ground and return forward direction for use in AddForce
     public Vector3 GetSlopeMoveDirection(Vector3 direction)

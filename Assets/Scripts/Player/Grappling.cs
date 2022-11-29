@@ -16,6 +16,7 @@ public class Grappling : MonoBehaviour
     public float grappleDistance;
     public float grappleDelayTime;
     public float overshootYAxis;
+    public float overshootXZAxis;
 
     private Vector3 grapplePoint;
 
@@ -68,13 +69,18 @@ public class Grappling : MonoBehaviour
             return;
         }
 
-        grappling = true;
-        pm.freeze = true;
+        
 
         RaycastHit hit;
         if(Physics.Raycast(cam.position, cam.forward , out hit, grappleDistance, whatIsGrappleable))
         {
+            pm.freeze = true;
+            grappling = true;
+
             grapplePoint = hit.point;
+            lineRenderer.enabled = true;
+            lineRenderer.positionCount = 2;
+            lineRenderer.SetPosition(1, grapplePoint);
 
             Invoke(nameof(ExecuteGrapple), grappleDelayTime);
         }
@@ -84,9 +90,7 @@ public class Grappling : MonoBehaviour
             Invoke(nameof(StopGrapple), grappleDelayTime);
         }
 
-        lineRenderer.enabled = true;
-        lineRenderer.positionCount = 2;
-        lineRenderer.SetPosition(1, grapplePoint);
+        
 
     }
 
@@ -103,7 +107,10 @@ public class Grappling : MonoBehaviour
             highestPointOnArc = overshootYAxis;
         }
 
-        pm.JumpToPosition(grapplePoint, highestPointOnArc);
+        Vector3 overShootDirection = (grapplePoint -transform.position).normalized;
+        Vector3 overShootGrapplePoint = new Vector3(grapplePoint.x + overShootDirection.x* overshootXZAxis ,grapplePoint.y,grapplePoint.z + overShootDirection.z *overshootXZAxis);
+
+        pm.JumpToPosition(overShootGrapplePoint, highestPointOnArc);
         Invoke(nameof(StopGrapple), 1f);
     }
 
@@ -119,4 +126,6 @@ public class Grappling : MonoBehaviour
         lineRenderer.enabled = false;
 
     }
+
+
 }

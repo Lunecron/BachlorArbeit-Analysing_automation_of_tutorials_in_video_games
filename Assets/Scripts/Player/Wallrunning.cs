@@ -10,7 +10,7 @@ public class Wallrunning : MonoBehaviour
     public float wallRunForce = 200f;
     public float wallClimbSpeed;
     public float maxWallRunTime = 1f;
-    private float wallRunTimer;
+    public float wallRunTimer;
     public float minWallRunSpeed;
 
     [Header("Walljump")]
@@ -348,4 +348,6 @@ public class Wallrunning : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawRay(transform.position, -orientation.right * wallCheckDistance);
     }
+
+
 }
