@@ -12,15 +12,16 @@ public class WallrunTimer : MonoBehaviour
     [SerializeField] private Image circleFill;
     [SerializeField] private TMPro.TMP_Text textMeshPro;
 
-    private int timer;
-    private int maxTimer;
+    private float timerFloat;
+    private int timerInt;
+    private float maxTimer;
 
     private void Start()
     {
         
         wallrunscript = player.GetComponent<Wallrunning>();
         pm = player.GetComponent<PlayerMovement>();
-        maxTimer = (int)wallrunscript.maxWallRunTime;
+        maxTimer = wallrunscript.maxWallRunTime;
     }
 
     // Update is called once per frame
@@ -28,9 +29,11 @@ public class WallrunTimer : MonoBehaviour
     {
         if (pm.wallrunning)
         {
-            timer = (int)wallrunscript.wallRunTimer;
-            textMeshPro.text = $"{timer % 60}";
-            circleFill.fillAmount = Mathf.InverseLerp(0, maxTimer, timer);
+
+            timerFloat = wallrunscript.wallRunTimer;
+            timerInt = (int)timerFloat;
+            textMeshPro.text = $"{timerInt % 60}";
+            circleFill.fillAmount = Mathf.InverseLerp(0, maxTimer, timerFloat);
         }
         else
         {
