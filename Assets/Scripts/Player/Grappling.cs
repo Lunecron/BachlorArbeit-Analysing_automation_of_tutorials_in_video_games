@@ -56,13 +56,14 @@ public class Grappling : MonoBehaviour
     {
         if (grappling)
         {
+            lineRenderer.positionCount = 2;
             lineRenderer.SetPosition(0, gunTip.position);
         }
     }
 
     private void StartGrapple()
     {
-        if(grapplingCDTimer > 0)
+        if(grapplingCDTimer > 0 || !pm.CanGrapple())
         {
             return;
         }
@@ -84,6 +85,7 @@ public class Grappling : MonoBehaviour
         }
 
         lineRenderer.enabled = true;
+        lineRenderer.positionCount = 2;
         lineRenderer.SetPosition(1, grapplePoint);
 
     }
@@ -111,6 +113,8 @@ public class Grappling : MonoBehaviour
         pm.activeGrapple = false;
         grappling = false;
         grapplingCDTimer = grapplingCD;
+
+        lineRenderer.positionCount = 0;
 
         lineRenderer.enabled = false;
 

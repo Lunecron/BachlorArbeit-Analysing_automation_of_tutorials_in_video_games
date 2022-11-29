@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 1112332693}
   - component: {fileID: 2356786860575070395}
   - component: {fileID: 1959353805}
+  - component: {fileID: 77806208}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -168,7 +169,8 @@ MonoBehaviour:
   walkSpeed: 7
   sprintSpeed: 10
   slideSpeed: 30
-  wallrunSpeed: 10
+  wallrunSpeed: 7
+  swingSpeed: 10
   speedIncreaseMultiplier: 1.5
   slopeIncreaseMultiplier: 2.5
   drasticalMoveSpeedChangeAmount: 4
@@ -241,7 +243,7 @@ MonoBehaviour:
     m_Bits: 1024
   wallRunForce: 200
   wallClimbSpeed: 3
-  maxWallRunTime: 1
+  maxWallRunTime: 99999
   minWallRunSpeed: 0
   wallJumpUpForce: 7
   wallJumpSideForce: 12
@@ -285,6 +287,27 @@ MonoBehaviour:
   overshootYAxis: 2
   grapplingCD: 0
   grapplingKey: 324
+--- !u!114 &77806208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2356786861611827496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d246daf95712b44ea2842ceb6c2cbe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swingKey: 323
+  lr: {fileID: 0}
+  gunTip: {fileID: 0}
+  cam: {fileID: 0}
+  player: {fileID: 2356786861611827498}
+  whatIsGappleable:
+    serializedVersion: 2
+    m_Bits: 1025
+  pm: {fileID: 2356786861611827501}
 --- !u!1 &2356786861661060627
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public float sprintSpeed;
     public float slideSpeed;
     public float wallrunSpeed;
+    public float swingSpeed;
 
     private float desiredMoveSpeed;
     private float lastDesiredMoveSpeed;
@@ -82,6 +83,8 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
+    Swinging playerSwing;
+
     public MovementState state;
 
     public enum MovementState
@@ -93,13 +96,16 @@ public class PlayerMovement : MonoBehaviour
         sliding,
         wallrunning,
         freeze,
-        air
+        air,
+        swinging
     }
     
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        playerSwing = GetComponent<Swinging>();
+
         rb.freezeRotation = true;
         readyToJump = true;
         sliding = false;
@@ -145,6 +151,12 @@ public class PlayerMovement : MonoBehaviour
         else if (restricted)
         {
             state = MovementState.restricted;
+        }
+        
+        else if (swinging)
+        {
+            state = MovementState.swinging;
+            desiredMoveSpeed = swingSpeed;
         }
 
         else if (wallrunning)
@@ -270,6 +282,12 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
+        //Disable movement while swing
+        if (swinging)
+        {
+            return;
+        }
+
         //on slope
         if (OnSlope() && !exitingSlope)
         {
@@ -361,6 +379,24 @@ public class PlayerMovement : MonoBehaviour
             return angle < maxSlopAngle && angle != 0;
         }
         return false;
+    }
+
+    public bool CanSwing()
+    {
+        if (activeGrapple)
+        {
+            return false;
+        }
+        return true;
+    }
+
+    public bool CanGrapple()
+    {
+        if (swinging)
+        {
+            return false;
+        }
+        return true;
     }
 
     #endregion
