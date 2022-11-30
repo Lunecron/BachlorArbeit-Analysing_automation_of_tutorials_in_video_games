@@ -56,6 +56,10 @@ public class Tutorial : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        if(other.tag != "Player")
+        {
+            return;
+        }
         tutorialExecTimer += Time.deltaTime;
         if ((tutorialExecTimer >= tutorialExecTime) && !tutorialStarted)
         {

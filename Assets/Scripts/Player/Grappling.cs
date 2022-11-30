@@ -96,6 +96,11 @@ public class Grappling : MonoBehaviour
 
     private void ExecuteGrapple()
     {
+        //use gravity if it was deactivated before
+        if(pm.gameObject.GetComponent<Rigidbody>().useGravity == false)
+        {
+            pm.gameObject.GetComponent<Rigidbody>().useGravity = true;
+        }
         pm.freeze = false;
 
         Vector3 lowestPoint = new Vector3(transform.position.x, transform.position.y - pm.playerHeight / 2, transform.position.z);

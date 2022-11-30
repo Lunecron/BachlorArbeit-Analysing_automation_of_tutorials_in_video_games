@@ -138,10 +138,12 @@ public class Swinging : MonoBehaviour
         // extend cable
         if (Input.GetKey(KeyCode.S))
         {
-            float extendedDistanceFromPoint = Vector3.Distance(transform.position, swingPoint) + extendCableSpeed;
+            rb.AddForce(orientation.forward * horizontalThrustForce * Time.deltaTime);
 
-            joint.maxDistance = extendedDistanceFromPoint * 0.8f;
-            joint.minDistance = extendedDistanceFromPoint * 0.25f;
+            //float extendedDistanceFromPoint = Vector3.Distance(transform.position, swingPoint) + extendCableSpeed;
+
+            //joint.maxDistance = extendedDistanceFromPoint * 0.8f;
+            //joint.minDistance = extendedDistanceFromPoint * 0.25f;
         }
     }
 
