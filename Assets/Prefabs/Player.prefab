@@ -243,7 +243,8 @@ MonoBehaviour:
     m_Bits: 1024
   wallRunForce: 200
   wallClimbSpeed: 3
-  maxWallRunTime: 99999
+  maxWallRunTime: 5
+  wallRunTimer: 0
   minWallRunSpeed: 1
   wallJumpUpForce: 7
   wallJumpSideForce: 12

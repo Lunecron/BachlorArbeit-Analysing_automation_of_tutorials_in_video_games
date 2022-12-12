@@ -93,7 +93,7 @@ public class Button : MonoBehaviour
         if (!newMaterial)
         {
             Debug.Log("Material not assiened! Take Defaul Material");
-            newMaterial = objectToChange.GetComponent<MeshRenderer>().materials[0];
+            newMaterial = objectToChange.GetComponent<MeshRenderer>().material;
         }
         if (!objectToChange)
         {
