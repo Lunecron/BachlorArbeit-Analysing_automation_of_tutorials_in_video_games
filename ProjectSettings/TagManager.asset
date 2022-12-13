@@ -14,11 +14,11 @@ TagManager:
   - Weapons
   - 
   - 
-  - 
+  - booster
   - whatIsGround
   - nonGrappable
-  - 
-  - 
+  - whatIsSwingable
+  - whatIsGrappable
   - 
   - 
   - 

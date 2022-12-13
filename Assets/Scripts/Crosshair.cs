@@ -10,17 +10,20 @@ public class Crosshair : MonoBehaviour
     public GameObject player;
     public Transform cam;
     private LayerMask whatIsGrappleable;
+    private LayerMask whatIsSwingable;
 
     public Image[] crosshairImages;
 
     private Color defaultColor;
-    public Color hookableColor;
+    public Color swingableColor;
+    public Color grappableColor;
 
 
     private void Start()
     {
         defaultColor = crosshairImages[0].color;
         whatIsGrappleable = player.GetComponent<Grappling>().whatIsGrappleable;
+        whatIsSwingable = player.GetComponent<Swinging>().whatIsGappleable;
     }
 
     private void Update()
@@ -32,11 +35,18 @@ public class Crosshair : MonoBehaviour
     private void CheckForGrappableWall()
     {
         RaycastHit hit;
-        if(Physics.Raycast(cam.position , cam.forward , out hit , player.GetComponent<Grappling>().grappleDistance ,whatIsGrappleable))
+        if(Physics.Raycast(cam.position , cam.forward , out hit , player.GetComponent<Grappling>().grappleDistance ,whatIsGrappleable) )
         {
             foreach(Image crosshairImage in crosshairImages)
             {
-                crosshairImage.color = hookableColor;
+                crosshairImage.color = grappableColor;
+            }
+        }
+        else if (Physics.Raycast(cam.position, cam.forward, out hit, player.GetComponent<Grappling>().grappleDistance, whatIsSwingable))
+        {
+            foreach (Image crosshairImage in crosshairImages)
+            {
+                crosshairImage.color = swingableColor;
             }
         }
         else

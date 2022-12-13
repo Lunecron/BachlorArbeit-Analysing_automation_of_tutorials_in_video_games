@@ -25,7 +25,10 @@ public class DeathZone : MonoBehaviour
             return;
         }
         checkPoints = respawnZone.GetCheckpoints();
-        player.GetComponent<CheckForTutorial>().GetActiveTutorial().increaseResets(1);
+        if (player.GetComponent<CheckForTutorial>().GetActiveTutorial())
+        {
+            player.GetComponent<CheckForTutorial>().GetActiveTutorial().increaseResets(1);
+        }        
 
         player.transform.position = checkPoints[respawnZone.GetActiveCheckpointNumber()].GetRespawnPoint().position;
 

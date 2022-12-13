@@ -34,6 +34,7 @@ public class BoostPad_MLab_Uncommented : MonoBehaviour
             pm = other.GetComponentInParent<PlayerMovement>();
 
             Rigidbody rb = pm.GetComponent<Rigidbody>();
+            rb.useGravity = true;
 
             if (normalBoosting)
                 rb.AddForce(boostDirection.normalized * boostForce, ForceMode.Impulse);

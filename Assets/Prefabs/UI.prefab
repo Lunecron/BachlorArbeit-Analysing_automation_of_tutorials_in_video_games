@@ -391,7 +391,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 157627774}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: GameMenu, Assembly-CSharp
+        m_MethodName: Menu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &195022931
 GameObject:
   m_ObjectHideFlags: 0
@@ -1520,7 +1532,8 @@ MonoBehaviour:
   - {fileID: 1460979334570744408}
   - {fileID: 1460979334257495728}
   - {fileID: 1460979333970587617}
-  hookableColor: {r: 1, g: 0, b: 0, a: 1}
+  swingableColor: {r: 1, g: 0, b: 0, a: 1}
+  grappableColor: {r: 0, g: 0.06504679, b: 1, a: 1}
 --- !u!1 &1460979333723449267
 GameObject:
   m_ObjectHideFlags: 0
