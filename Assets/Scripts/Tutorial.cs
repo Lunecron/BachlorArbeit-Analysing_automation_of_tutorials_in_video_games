@@ -52,6 +52,12 @@ public class Tutorial : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         tutorialExecTimer = 0f;
+        if (!tutorialStarted)
+        {
+            player.GetComponent<CheckForTutorial>().SetActiveTutorial(gameObject.GetComponent<Tutorial>());
+        }
+        
+        
     }
 
     private void OnTriggerStay(Collider other)
