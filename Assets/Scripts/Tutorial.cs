@@ -12,6 +12,8 @@ public class Tutorial : MonoBehaviour
     public PopUpSystem popUpSystem;
     public Animator popUpBox;
     public GameMenu gameMenu;
+    Use_Log_File log_file;
+
     [Header("Timer")]
     public float tutorialExecTime;
     private float tutorialExecTimer = 0f;
@@ -36,6 +38,11 @@ public class Tutorial : MonoBehaviour
     {
         player = FindObjectOfType<PlayerMovement>().gameObject;
         pm = player.GetComponent<PlayerMovement>();
+
+        if (!log_file)
+        {
+            log_file = FindObjectOfType<Use_Log_File>();
+        }
     }
     private void Update()
     {
@@ -108,6 +115,7 @@ public class Tutorial : MonoBehaviour
             player = FindObjectOfType<PlayerMovement>().gameObject;
         }
         player.SetActive(true);
+        
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         StartCoroutine(EnableGameMenuAfterDelay(true,1f));
@@ -178,5 +186,6 @@ public class Tutorial : MonoBehaviour
     public void increaseResets(int amount)
     {
         resets += amount;
+        log_file.IncreaseDeath();
     }
 }

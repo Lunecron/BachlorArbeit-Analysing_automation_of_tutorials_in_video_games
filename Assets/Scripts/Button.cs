@@ -9,6 +9,7 @@ public class Button : MonoBehaviour
     public float button_pushInDistance = 0.1f;
     
     public GameObject connected_element;
+    [SerializeField] Timer timer;
 
 
     [Header("OnButtonPress")]
@@ -24,6 +25,10 @@ public class Button : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (!timer)
+        {
+            Debug.Log("No Timer found");
+        }
     }
 
     // Update is called once per frame
@@ -62,6 +67,9 @@ public class Button : MonoBehaviour
                 }
                 
                 PushButtonDown();
+                timer.StopTimer();
+                timer.SaveTimer();
+
                 
                 if (changeMaterial)
                 {
