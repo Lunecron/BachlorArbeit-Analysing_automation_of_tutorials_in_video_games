@@ -105,8 +105,6 @@ public class Tutorial : MonoBehaviour
         {
             SetButtonImage();
         }
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
         gameMenu.EnableGameMenu(false);
         if (!player)
         {
@@ -170,6 +168,10 @@ public class Tutorial : MonoBehaviour
         {
             return pm.walljumping;
         }
+        else if (boolName == "wallclimbing")
+        {
+            return pm.wallclimbing;
+        }
         else if (boolName == "sliding")
         {
             return pm.sliding;
@@ -177,6 +179,10 @@ public class Tutorial : MonoBehaviour
         else if (boolName == "swinging")
         {
             return pm.swinging;
+        }
+        else if (boolName == "grappling")
+        {
+            return pm.activeGrapple;
         }
         else if (boolName == "walking")
         {
@@ -193,6 +199,10 @@ public class Tutorial : MonoBehaviour
         else if (boolName == "air")
         {
             return Input.GetKeyDown(pm.jumpKey);
+        }
+        else if (boolName == "moved")
+        {
+            return pm.moved;
         }
 
         return false;

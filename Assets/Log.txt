@@ -1,2 +1,54 @@
-Login date: 17.01.2023 20:09:37
-Total_Time:0,9510609
+Login date: 17.01.2023 23:28:11
+Total_Time:27,88807
+Login date: 17.01.2023 23:28:45
+Total_Time:46,04367
+Login date: 17.01.2023 23:31:20
+Total_Time:2,77431
+Login date: 17.01.2023 23:40:15
+Total_Time:18,68782
+Login date: 17.01.2023 23:44:47
+Total_Time:0
+Login date: 17.01.2023 23:45:25
+Total_Time:14,80939
+Login date: 17.01.2023 23:46:03
+Total_Time:13,56764
+Login date: 17.01.2023 23:46:35
+Total_Time:3,477952
+Login date: 17.01.2023 23:46:49
+Total_Time:0,7033002
+Login date: 17.01.2023 23:47:18
+Total_Time:7,228192
+Login date: 17.01.2023 23:48:38
+Total_Time:62,42944
+Login date: 17.01.2023 23:50:10
+Total_Time:14,52745
+Login date: 17.01.2023 23:51:21
+Total_Time:50,86026
+Login date: 17.01.2023 23:52:55
+Total_Time:21,42787
+Login date: 17.01.2023 23:53:22
+Room_2_Timer:29,33941
+Room_2_Timer_Deaths:3
+Total_Time:47,2906
+Login date: 17.01.2023 23:54:51
+Total_Time:45,90445
+Login date: 18.01.2023 00:00:37
+Total_Time:33,33527
+Login date: 18.01.2023 00:03:35
+Total_Time:65,36832
+Login date: 18.01.2023 00:25:10
+Total_Time:11,32755
+Login date: 18.01.2023 00:33:59
+Total_Time:11,58967
+Login date: 18.01.2023 00:35:28
+Total_Time:15,09837
+Login date: 18.01.2023 00:37:59
+Total_Time:9,193337
+Login date: 18.01.2023 00:41:40
+Total_Time:52,95142
+Login date: 18.01.2023 00:43:20
+Total_Time:26,8955
+Login date: 18.01.2023 00:44:32
+Total_Time:14,67186
+Login date: 18.01.2023 00:46:40
+Total_Time:48,38636

@@ -72,17 +72,18 @@ public class Grappling : MonoBehaviour
         
 
         RaycastHit hit;
-        if(Physics.Raycast(cam.position, cam.forward , out hit, grappleDistance, whatIsGrappleable))
+        if(Physics.Raycast(cam.position, cam.forward , out hit, grappleDistance, whatIsGrappleable) && (((1 << hit.collider.gameObject.layer) & whatIsGrappleable) != 0))
         {
-            pm.freeze = true;
-            grappling = true;
+                pm.freeze = true;
+                grappling = true;
 
-            grapplePoint = hit.point;
-            lineRenderer.enabled = true;
-            lineRenderer.positionCount = 2;
-            lineRenderer.SetPosition(1, grapplePoint);
+                grapplePoint = hit.point;
+                lineRenderer.enabled = true;
+                lineRenderer.positionCount = 2;
+                lineRenderer.SetPosition(1, grapplePoint);
 
-            Invoke(nameof(ExecuteGrapple), grappleDelayTime);
+                Invoke(nameof(ExecuteGrapple), grappleDelayTime);
+
         }
         else
         {
@@ -116,7 +117,7 @@ public class Grappling : MonoBehaviour
         Vector3 overShootGrapplePoint = new Vector3(grapplePoint.x + overShootDirection.x* overshootXZAxis ,grapplePoint.y,grapplePoint.z + overShootDirection.z *overshootXZAxis);
 
         pm.JumpToPosition(overShootGrapplePoint, highestPointOnArc);
-        Invoke(nameof(StopGrapple), 1f);
+        Invoke(nameof(StopGrapple), 0.5f);
     }
 
     public void StopGrapple()

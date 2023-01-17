@@ -283,11 +283,16 @@ public class Wallrunning : MonoBehaviour
         //move up or down
         if (upwardsRunning && !downwardsRunning)
         {
+            pm.wallclimbing = true;
             rb.velocity = new Vector3(rb.velocity.x, wallClimbSpeed, rb.velocity.z);
         }
         else if(downwardsRunning && !upwardsRunning)
         {
             rb.velocity = new Vector3(rb.velocity.x, -wallClimbSpeed, rb.velocity.z);
+        }
+        else
+        {
+            pm.wallclimbing = false;
         }
 
 
@@ -316,6 +321,7 @@ public class Wallrunning : MonoBehaviour
     private void StopWallRun()
     {
         pm.wallrunning = false;
+        pm.wallclimbing = false;
         rb.useGravity = true;
 
         //reset camera effects

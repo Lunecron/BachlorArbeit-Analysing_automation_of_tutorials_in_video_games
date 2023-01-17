@@ -179,6 +179,7 @@ MonoBehaviour:
   jumpForce: 12
   jumpCD: 0.35
   airMultiplier: 0.4
+  jumpMultiplier: 1
   crouchSpeed: 3.5
   crouchYScale: 0.5
   standUpBufferDistance: 0.1
@@ -200,6 +201,7 @@ MonoBehaviour:
   activeGrapple: 0
   enableMovementOnNextTouch: 0
   swinging: 0
+  walljumping: 0
   jumpKey: 32
   sprintKey: 304
   crouchKey: 99

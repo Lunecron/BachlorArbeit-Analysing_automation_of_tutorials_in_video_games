@@ -12,11 +12,11 @@ public class Swinging : MonoBehaviour
     public Transform gunTip;
     public Transform cam;
     public Transform player;
-    public LayerMask whatIsGappleable;
+    public LayerMask whatIsGrappleable;
     public PlayerMovement pm;
 
     [Header("Swinging")]
-    private float maxSwingDistance = 25f;
+    public float maxSwingDistance = 25f;
     private Vector3 swingPoint;
     private SpringJoint joint;
     private Vector3 currentGrapplePosition;
@@ -66,29 +66,37 @@ public class Swinging : MonoBehaviour
         {
             return;
         }
-        pm.swinging = true;
+        
         RaycastHit hit;
-        if(Physics.Raycast(cam.position,cam.forward , out hit , maxSwingDistance, whatIsGappleable))
+        if(Physics.Raycast(cam.position,cam.forward , out hit , maxSwingDistance))
         {
-            swingPoint = hit.point;
-            joint = player.gameObject.AddComponent<SpringJoint>();
-            joint.autoConfigureConnectedAnchor = false;
-            joint.connectedAnchor = swingPoint;
 
-            float distanceFromPoint = Vector3.Distance(player.position,swingPoint);
+            if (((1 << hit.collider.gameObject.layer) & whatIsGrappleable) != 0)
+            {
+                //It matched one
 
-            //distance grapple will try to keep from grapplepoint
-            joint.maxDistance = distanceFromPoint * 0.8f;
-            joint.minDistance = distanceFromPoint * 0.25f;
+                pm.swinging = true;
+                swingPoint = hit.point;
+                joint = player.gameObject.AddComponent<SpringJoint>();
+                joint.autoConfigureConnectedAnchor = false;
+                joint.connectedAnchor = swingPoint;
 
-            //curstomized values
-            joint.spring = 4.5f;
-            joint.damper = 7f;
-            joint.massScale = 4.5f;
+                float distanceFromPoint = Vector3.Distance(player.position, swingPoint);
 
-            lr.enabled = true;
-            lr.positionCount = 2;
-            currentGrapplePosition = gunTip.position;
+                //distance grapple will try to keep from grapplepoint
+                joint.maxDistance = distanceFromPoint * 0.8f;
+                joint.minDistance = distanceFromPoint * 0.25f;
+
+                //curstomized values
+                joint.spring = 4.5f;
+                joint.damper = 7f;
+                joint.massScale = 4.5f;
+
+                lr.enabled = true;
+                lr.positionCount = 2;
+                currentGrapplePosition = gunTip.position;
+            }
+            
             
         }
     }

@@ -28,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpCD;
     public float airMultiplier;
     bool readyToJump;
+    public float jumpMultiplier;
 
     [Header("Crouching")]
     public float crouchSpeed;
@@ -68,6 +69,8 @@ public class PlayerMovement : MonoBehaviour
     public bool swinging;
 
     public bool walljumping;
+    public bool wallclimbing;
+    public bool moved;
 
 
     [Header("Keybinds")]
@@ -168,7 +171,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Mode - Sliding
-        if (sliding)
+        else if (sliding)
         {
             state = MovementState.sliding;
 
@@ -208,7 +211,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             state = MovementState.air;
-
+            desiredMoveSpeed = walkSpeed;
         }
 
         // check if desiredMoveSpeed has changed drastically
@@ -235,6 +238,10 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalInput = Input.GetAxisRaw("Horizontal");
         verticalInput = Input.GetAxisRaw("Vertical");
+        if(moved == false && (horizontalInput > Mathf.Epsilon || verticalInput > Mathf.Epsilon))
+        {
+            moved = true;
+        }
 
         //when to jump
 
@@ -469,7 +476,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Vector3 CalculateJumpVelocity(Vector3 startPoint, Vector3 endPoint, float trajectoryHeight)
     {
-        float gravity = Physics.gravity.y;
+        float gravity = Physics.gravity.y * jumpMultiplier;
         float displacementY = endPoint.y - startPoint.y;
         Vector3 displacementXZ = new Vector3(endPoint.x - startPoint.x, 0f, endPoint.z - startPoint.z);
 
@@ -508,10 +515,10 @@ public class PlayerMovement : MonoBehaviour
         exitingSlope = false;
     }
 
-    public void JumpToPosition(Vector3 tragetPosition, float trajectoryHeight)
+    public void JumpToPosition(Vector3 targetPosition, float trajectoryHeight)
     {
         activeGrapple = true;
-        velocityToSet = CalculateJumpVelocity(transform.position, tragetPosition, trajectoryHeight);
+        velocityToSet = CalculateJumpVelocity(transform.position, targetPosition, trajectoryHeight);
 
         Invoke(nameof(SetVelocity), hookDelay);
     }
