@@ -28,15 +28,11 @@ public class DeathZone : MonoBehaviour
         if (player.GetComponent<CheckForTutorial>().GetActiveTutorial())
         {
             player.GetComponent<CheckForTutorial>().GetActiveTutorial().increaseResets(1);
-        }        
+        }
+        
 
         player.transform.position = checkPoints[respawnZone.GetActiveCheckpointNumber()].GetRespawnPoint().position;
 
     }
 
-
-    private void OnTriggerStay(Collider other)
-    {
-        OnTriggerEnter(other);
-    }
 }

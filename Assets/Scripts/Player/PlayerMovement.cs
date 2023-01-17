@@ -67,6 +67,8 @@ public class PlayerMovement : MonoBehaviour
     public bool enableMovementOnNextTouch;
     public bool swinging;
 
+    public bool walljumping;
+
 
     [Header("Keybinds")]
     public KeyCode jumpKey = KeyCode.Space;

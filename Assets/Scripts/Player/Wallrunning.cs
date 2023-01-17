@@ -326,6 +326,8 @@ public class Wallrunning : MonoBehaviour
     private void WallJump()
     {
         //exiting wall
+        pm.walljumping = true;
+        Invoke("EndOfWalljump",0.5f);
         RememberLastWall();
         exitingWall = true;        
         exitWallTimer = exitWallTime;
@@ -337,6 +339,11 @@ public class Wallrunning : MonoBehaviour
         //reset y velocity and add force
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
         rb.AddForce(forceToApply, ForceMode.Impulse);
+    }
+
+    private void EndOfWalljump()
+    {
+        pm.walljumping = false;
     }
 
 

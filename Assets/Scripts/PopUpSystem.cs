@@ -8,11 +8,26 @@ public class PopUpSystem : MonoBehaviour
     public Animator popUpAnimator;
 
     public TMPro.TMP_Text popUpText;
+    public TMPro.TMP_Text popUpTitel;
 
-    public void PopUp(string text)
+    public GameObject button_image;
+
+    public void PopUp(string titel,string text, bool enableButtonImage)
     {
+
+        if (enableButtonImage)
+        {
+            EnableButtonImage();
+        }
+        else
+        {
+            DisableButtonImage();
+        }
+
         popUpBox.SetActive(true);
+        popUpTitel.text = titel;
         popUpText.text = text;
+
         popUpAnimator.SetTrigger("pop");
     }
 
@@ -24,5 +39,15 @@ public class PopUpSystem : MonoBehaviour
     public void Resume()
     {
         Time.timeScale = 1f;
+    }
+
+    public void EnableButtonImage()
+    {
+        button_image.SetActive(true);
+    }
+
+    public void DisableButtonImage()
+    {
+        button_image.SetActive(false);
     }
 }

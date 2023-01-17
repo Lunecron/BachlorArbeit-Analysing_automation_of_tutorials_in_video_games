@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1206414305}
   - component: {fileID: 1206414304}
   m_Layer: 0
-  m_Name: Tutorial Zone
+  m_Name: Tutorial OLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

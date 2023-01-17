@@ -7,6 +7,8 @@ public class Use_Log_File : MonoBehaviour
 {
     string path = "";
     int deathcounter = 0;
+    float timer = 0;
+    bool timerActive = false;
     void CreateText()
     {
         //Path of File
@@ -29,6 +31,21 @@ public class Use_Log_File : MonoBehaviour
     void Start()
     {
         CreateText();
+        
+        
+    }
+
+    private void Update()
+    {
+        if (timerActive)
+        {
+            timer += Time.deltaTime;
+        }
+    }
+
+    public void StartTimer()
+    {
+        timerActive = true;
     }
 
     public void LogString(string name,string str)
@@ -55,6 +72,11 @@ public class Use_Log_File : MonoBehaviour
     public void IncreaseDeath()
     {
         deathcounter++;
+    }
+
+    private void OnApplicationQuit()
+    {
+        File.AppendAllText(path, "Total_Time:" + timer + "\n");
     }
 
 

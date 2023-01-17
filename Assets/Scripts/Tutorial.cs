@@ -30,7 +30,10 @@ public class Tutorial : MonoBehaviour
     public int maxResetsTillTut = 1;
 
     [Header("Tutorial Text")]
-    [SerializeField] public string tutroialText;
+    [SerializeField] public string tutorialTitel;
+    [SerializeField] public string tutorialText;
+    [SerializeField] public bool useImage = false;
+    [SerializeField] public Sprite buttonImage;
     public KeyCode continueButton = KeyCode.Escape;
 
 
@@ -74,7 +77,7 @@ public class Tutorial : MonoBehaviour
             return;
         }
         tutorialExecTimer += Time.deltaTime;
-        if ((tutorialExecTimer >= tutorialExecTime) && !tutorialStarted)
+        if ((tutorialExecTimer >= tutorialExecTime) && !tutorialStarted && pm.grounded)
         {
             StartTutorial();
         }
@@ -96,7 +99,14 @@ public class Tutorial : MonoBehaviour
     {
         tutorialStarted = true;
         inTutorial = true;
-        popUpSystem.PopUp(tutroialText);
+        popUpSystem.PopUp(tutorialTitel,tutorialText,useImage);
+
+        if (useImage)
+        {
+            SetButtonImage();
+        }
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         gameMenu.EnableGameMenu(false);
         if (!player)
         {
@@ -121,6 +131,12 @@ public class Tutorial : MonoBehaviour
         StartCoroutine(EnableGameMenuAfterDelay(true,1f));
         Invoke(nameof(StopMyCoroutine),1f);
         
+    }
+
+    private void SetButtonImage()
+    {
+        GameObject button = FindObjectOfType<ButtonImage>().gameObject;
+        button.GetComponent<Image>().sprite = buttonImage;
     }
 
     private void StopMyCoroutine()
@@ -149,6 +165,10 @@ public class Tutorial : MonoBehaviour
         if(boolName == "wallrunning")
         {
             return pm.wallrunning;
+        }
+        else if(boolName =="walljuming")
+        {
+            return pm.walljumping;
         }
         else if (boolName == "sliding")
         {
