@@ -47,12 +47,17 @@ public class Swinging : MonoBehaviour
             StopSwing();
         }
 
+
+
+    }
+
+    private void FixedUpdate()
+    {
         //air movement on hook
-        if(joint != null)
+        if (joint != null)
         {
             AirMovement();
         }
-
     }
 
     private void LateUpdate()
