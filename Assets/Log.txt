@@ -1,12 +1,8 @@
-Login date: 18.01.2023 11:23:04
-Total_Time:2,249244
-Login date: 18.01.2023 11:31:12
-Room_3_Timer:17,08239
-Room_3_Timer_Deaths:0
-Total_Time:22,53291
-Login date: 18.01.2023 11:32:59
-Room_4_Timer:38,78006
-Room_4_Timer_Deaths:5
-Total_Time:123,9429
-Login date: 18.01.2023 11:35:56
-Total_Time:77,80375
+Login date: 27.01.2023 14:56:41
+Total_Time:24,77529
+Login date: 27.01.2023 16:09:39
+Total_Time:16,44718
+Login date: 27.01.2023 16:19:06
+Total_Time:10,37753
+Login date: 27.01.2023 16:19:57
+Total_Time:30,79614
