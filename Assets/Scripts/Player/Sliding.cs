@@ -67,7 +67,7 @@ public class Sliding : MonoBehaviour
         slideTimer = maxSlideTime;
     }
 
-    private void StopSlide()
+    public void StopSlide()
     {
         pm.sliding = false;
         pm.StandUp();

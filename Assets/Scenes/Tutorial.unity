@@ -69737,7 +69737,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2150306058444417758, guid: 164531f35e4cbc2479067fc9443ce74f, type: 3}
       propertyPath: disableTime
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2150306058444417758, guid: 164531f35e4cbc2479067fc9443ce74f, type: 3}
       propertyPath: localBoosting
@@ -82146,7 +82146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2150306058444417758, guid: 164531f35e4cbc2479067fc9443ce74f, type: 3}
       propertyPath: disableTime
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2150306058444417758, guid: 164531f35e4cbc2479067fc9443ce74f, type: 3}
       propertyPath: localBoosting

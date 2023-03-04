@@ -64,17 +64,22 @@ public class BoostPad_MLab_Uncommented : MonoBehaviour
 
     private void AddForce(Collider other)
     {
-        
+       
 
         if (other.GetComponentInParent<PlayerMovement>() != null)
         {
-            if (disablePlayerInput)
-            {
-                DisablePlayerInput();
-                disableTimer = disableTime;
-            }           
+                 
 
             pm = other.GetComponentInParent<PlayerMovement>();
+            if (disablePlayerInput)
+            {
+                if (pm.gameObject.GetComponent<Sliding>())
+                {
+                    pm.gameObject.GetComponent<Sliding>().StopSlide();
+                }
+                    DisablePlayerInput();
+                disableTimer = disableTime;
+            }
 
             Rigidbody rb = pm.GetComponent<Rigidbody>();
             rb.useGravity = true;
