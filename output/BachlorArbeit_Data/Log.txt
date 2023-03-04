@@ -1,0 +1,3 @@
+Logging Information 
+Login date: 04.03.2023 16:53:25
+Total_Time:38,2091

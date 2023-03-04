@@ -214,7 +214,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             state = MovementState.air;
-            desiredMoveSpeed = walkSpeed;
+
         }
 
         // check if desiredMoveSpeed has changed drastically

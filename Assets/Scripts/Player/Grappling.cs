@@ -82,7 +82,7 @@ public class Grappling : MonoBehaviour
        RaycastHit hit;
        if (Physics.Raycast(cam.position, cam.forward, out hit, grappleDistance, whatIsGrappleable) && (((1 << hit.collider.gameObject.layer) & whatIsGrappleable) != 0))
        {
-                pm.freeze = true;
+                //pm.freeze = true;
                 grappling = true;
 
                 grapplePoint = hit.point;
