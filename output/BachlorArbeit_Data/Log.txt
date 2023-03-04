@@ -1,7 +1,0 @@
-Logging Information 
-Login date: 04.03.2023 17:36:02
-Room_4_Timer:32,63849
-Room_4_Timer_Deaths:1
-Total_Time:232,181
-Login date: 04.03.2023 17:40:03
-Total_Time:21,56227
