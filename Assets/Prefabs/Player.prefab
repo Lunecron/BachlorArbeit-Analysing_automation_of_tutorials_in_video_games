@@ -168,18 +168,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 7
-  sprintSpeed: 10
+  sprintSpeed: 14
   slideSpeed: 40
-  wallrunSpeed: 7
-  swingSpeed: 20
+  wallrunSpeed: 12
+  swingSpeed: 21
   speedIncreaseMultiplier: 1.5
   slopeIncreaseMultiplier: 5
-  drasticalMoveSpeedChangeAmount: 4
+  drasticalMoveSpeedChangeAmount: 8
   groundDrag: 5
+  disableMovement: 0
   jumpForce: 12
   jumpCD: 0.35
   airMultiplier: 0.4
-  jumpMultiplier: 1
+  jumpMultiplier: 1.1
   crouchSpeed: 3.5
   crouchYScale: 0.5
   standUpBufferDistance: 0.1
@@ -202,6 +203,8 @@ MonoBehaviour:
   enableMovementOnNextTouch: 0
   swinging: 0
   walljumping: 0
+  wallclimbing: 0
+  moved: 0
   jumpKey: 32
   sprintKey: 304
   crouchKey: 99
@@ -245,12 +248,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 13312
   wallRunForce: 200
-  wallClimbSpeed: 3
+  wallClimbSpeed: 4
   maxWallRunTime: 5
   wallRunTimer: 0
   minWallRunSpeed: 1
-  wallJumpUpForce: 7
-  wallJumpSideForce: 12
+  wallJumpUpForce: 8
+  wallJumpSideForce: 15
   doJumpOnEndOfTimer: 0
   resetDoubleJumpsOnNewWall: 1
   resetDoubleJumpsOnEveryWall: 0
@@ -287,9 +290,10 @@ MonoBehaviour:
     m_Bits: 8192
   lineRenderer: {fileID: 0}
   grappleDistance: 25
-  grappleDelayTime: 0.25
+  grappleDelayTime: 0.1
   overshootYAxis: 10
   overshootXZAxis: 10
+  coyoteTime: 0.2
   grapplingCD: 0.5
   grapplingKey: 324
 --- !u!114 &77806208
@@ -309,14 +313,16 @@ MonoBehaviour:
   gunTip: {fileID: 0}
   cam: {fileID: 0}
   player: {fileID: 2356786861611827498}
-  whatIsGappleable:
+  whatIsGrappleable:
     serializedVersion: 2
     m_Bits: 4096
   pm: {fileID: 2356786861611827501}
+  maxSwingDistance: 25
+  coyoteTime: 0.2
   orientation: {fileID: 2356786861771534537}
   rb: {fileID: 2356786861611827499}
   horizontalThrustForce: 2000
-  forwardThrustForce: 1000
+  forwardThrustForce: 2000
   extendCableSpeed: 40
 --- !u!114 &6208261974757857680
 MonoBehaviour:
