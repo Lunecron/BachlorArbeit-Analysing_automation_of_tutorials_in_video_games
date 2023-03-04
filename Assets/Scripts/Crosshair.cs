@@ -11,8 +11,12 @@ public class Crosshair : MonoBehaviour
     public Transform cam;
     private LayerMask whatIsGrappleable;
     private LayerMask whatIsSwingable;
+    private float grappleDistance;
+    private float swingDistance;
+
 
     public Image[] crosshairImages;
+
 
     private Color defaultColor;
     public Color swingableColor;
@@ -24,6 +28,8 @@ public class Crosshair : MonoBehaviour
         defaultColor = crosshairImages[0].color;
         whatIsGrappleable = player.GetComponent<Grappling>().whatIsGrappleable;
         whatIsSwingable = player.GetComponent<Swinging>().whatIsGrappleable;
+        grappleDistance = player.GetComponent<Grappling>().grappleDistance;
+        swingDistance = player.GetComponent<Swinging>().maxSwingDistance;
     }
 
     private void Update()
@@ -35,7 +41,7 @@ public class Crosshair : MonoBehaviour
     private void CheckForGrappableWall()
     {
         RaycastHit hit;
-        if(Physics.Raycast(cam.position , cam.forward , out hit , player.GetComponent<Grappling>().grappleDistance) && (((1 << hit.collider.gameObject.layer) & whatIsGrappleable) != 0))
+        if(Physics.Raycast(cam.position , cam.forward , out hit ,grappleDistance ) && (((1 << hit.collider.gameObject.layer) & whatIsGrappleable) != 0))
         {
                 foreach (Image crosshairImage in crosshairImages)
                 {
@@ -43,7 +49,7 @@ public class Crosshair : MonoBehaviour
                 }
 
         }
-        else if (Physics.Raycast(cam.position, cam.forward, out hit, player.GetComponent<Swinging>().maxSwingDistance) && (((1 << hit.collider.gameObject.layer) & whatIsSwingable) != 0))
+        else if (Physics.Raycast(cam.position, cam.forward, out hit, swingDistance) && (((1 << hit.collider.gameObject.layer) & whatIsSwingable) != 0))
         {
                 foreach (Image crosshairImage in crosshairImages)
                 {

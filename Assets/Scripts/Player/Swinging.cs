@@ -21,6 +21,9 @@ public class Swinging : MonoBehaviour
     private SpringJoint joint;
     private Vector3 currentGrapplePosition;
 
+    [SerializeField] private float coyoteTime = 0.2f;
+    private float coyoteTimer = 0;
+
     [Header("AirMovement")]
     public Transform orientation;
     public Rigidbody rb;
@@ -37,12 +40,17 @@ public class Swinging : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(swingKey))
+        if (coyoteTimer > 0)
         {
+            coyoteTimer -= Time.deltaTime;
             StartSwing();
         }
-
-        if (Input.GetKeyUp(swingKey))
+        else if (Input.GetKeyDown(swingKey))
+        {
+            coyoteTimer = coyoteTime;
+            StartSwing();
+        }
+        else if (Input.GetKeyUp(swingKey))
         {
             StopSwing();
         }

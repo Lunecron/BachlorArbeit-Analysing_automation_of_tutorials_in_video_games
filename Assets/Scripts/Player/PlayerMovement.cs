@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
     public float groundDrag;
 
+    public bool disableMovement = false;
+
     [Header("Jumping")]
     public float jumpForce;
     public float jumpCD;
@@ -123,7 +125,8 @@ public class PlayerMovement : MonoBehaviour
     {
         CheckAndHandleGround();
 
-        MyInput();
+
+        MyInput();     
         SpeedControl();
         StateHandler();
 
@@ -135,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (state != MovementState.restricted)
+        if (state != MovementState.restricted && !disableMovement)
         {
             MovePlayer();
         }

@@ -20,6 +20,9 @@ public class Grappling : MonoBehaviour
 
     private Vector3 grapplePoint;
 
+    [SerializeField] private float coyoteTime = 0.2f;
+    private float coyoteTimer = 0;
+
     [Header("Cooldown")]
     public float grapplingCD;
     private float grapplingCDTimer;
@@ -37,8 +40,15 @@ public class Grappling : MonoBehaviour
 
     private void Update()
     {
+        if(coyoteTimer > 0 && !grappling)
+        {
+            coyoteTimer -= Time.deltaTime;
+            StartGrapple();
+        }
+
         if(Input.GetKeyDown(grapplingKey) && !grappling)
         {
+            coyoteTimer = coyoteTime;
             StartGrapple();
         }
         else if(Input.GetKeyUp(grapplingKey) && grappling)
@@ -69,11 +79,9 @@ public class Grappling : MonoBehaviour
             return;
         }
 
-        
-
-        RaycastHit hit;
-        if(Physics.Raycast(cam.position, cam.forward , out hit, grappleDistance, whatIsGrappleable) && (((1 << hit.collider.gameObject.layer) & whatIsGrappleable) != 0))
-        {
+       RaycastHit hit;
+       if (Physics.Raycast(cam.position, cam.forward, out hit, grappleDistance, whatIsGrappleable) && (((1 << hit.collider.gameObject.layer) & whatIsGrappleable) != 0))
+       {
                 pm.freeze = true;
                 grappling = true;
 
@@ -84,14 +92,13 @@ public class Grappling : MonoBehaviour
 
                 Invoke(nameof(ExecuteGrapple), grappleDelayTime);
 
-        }
-        else
-        {
-            grapplePoint = cam.position + cam.forward * grappleDistance;
-            Invoke(nameof(StopGrapple), grappleDelayTime);
-        }
+       }
+       else
+       {
+                grapplePoint = cam.position + cam.forward * grappleDistance;
+                Invoke(nameof(StopGrapple), grappleDelayTime);
+       }
 
-        
 
     }
 

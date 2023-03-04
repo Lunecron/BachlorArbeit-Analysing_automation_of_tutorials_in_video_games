@@ -41,7 +41,7 @@ public class Tutorial : MonoBehaviour
     {
         player = FindObjectOfType<PlayerMovement>().gameObject;
         pm = player.GetComponent<PlayerMovement>();
-
+        tutorialExecTimer = 0f;
         if (!log_file)
         {
             log_file = FindObjectOfType<Use_Log_File>();
@@ -61,7 +61,7 @@ public class Tutorial : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        tutorialExecTimer = 0f;
+
         if (!tutorialStarted)
         {
             player.GetComponent<CheckForTutorial>().SetActiveTutorial(gameObject.GetComponent<Tutorial>());
@@ -89,7 +89,7 @@ public class Tutorial : MonoBehaviour
         {
             SkipTutorial();
         }
-        else if(resets >= maxResetsTillTut && !tutorialStarted)
+        else if(resets >= maxResetsTillTut && !tutorialStarted && pm.grounded)
         {
             StartTutorial();
         }

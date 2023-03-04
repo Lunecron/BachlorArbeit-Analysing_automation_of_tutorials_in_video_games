@@ -10,6 +10,9 @@ public class Checkpoint : MonoBehaviour
     [SerializeField] RespawnZone respawnZone;
     [SerializeField] Transform respawnPoint;
 
+    [SerializeField] public Vector3 lookDirectionWhileSpawning = new Vector3(0f,0f,0f);
+    [SerializeField] float gizmoRadius = 0.5f;
+
     private void Start()
     {
         
@@ -57,5 +60,13 @@ public class Checkpoint : MonoBehaviour
     public Transform GetRespawnPoint()
     {
         return respawnPoint;
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(transform.position, transform.position + lookDirectionWhileSpawning);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawSphere(transform.position + lookDirectionWhileSpawning, gizmoRadius);
     }
 }

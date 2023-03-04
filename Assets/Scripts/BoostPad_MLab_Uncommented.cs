@@ -15,7 +15,32 @@ public class BoostPad_MLab_Uncommented : MonoBehaviour
 
     public float boostDuration = 1f;
 
+    [SerializeField] bool disablePlayerInput = false;
+    [SerializeField] float disableTime = 1f;
+    private float disableTimer = 0;
+
     private PlayerMovement pm = null;
+
+    private void Awake()
+    {
+        pm = FindObjectOfType<PlayerMovement>();
+    }
+    private void Update()
+    {
+        if (disablePlayerInput)
+        {
+            if (disableTimer > 0)
+            {
+                disableTimer -= Time.deltaTime;
+                if(disableTimer <= 0)
+                {
+                    EnablePlayerInput();
+                }
+            }
+
+        }
+        
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,16 +52,35 @@ public class BoostPad_MLab_Uncommented : MonoBehaviour
         AddForce(collision.collider);
     }
 
+    private void DisablePlayerInput()
+    {
+        pm.disableMovement = true;
+    }
+
+    private void EnablePlayerInput()
+    {
+        pm.disableMovement = false;
+    }
+
     private void AddForce(Collider other)
     {
+        
+
         if (other.GetComponentInParent<PlayerMovement>() != null)
         {
+            if (disablePlayerInput)
+            {
+                DisablePlayerInput();
+                disableTimer = disableTime;
+            }           
+
             pm = other.GetComponentInParent<PlayerMovement>();
 
             Rigidbody rb = pm.GetComponent<Rigidbody>();
             rb.useGravity = true;
 
             if (normalBoosting)
+                rb.velocity = Vector3.zero;
                 rb.AddForce(boostDirection.normalized * boostForce, ForceMode.Impulse);
 
             if (localBoosting)
