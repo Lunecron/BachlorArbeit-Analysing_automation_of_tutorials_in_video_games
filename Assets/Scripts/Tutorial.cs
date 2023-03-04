@@ -36,6 +36,10 @@ public class Tutorial : MonoBehaviour
     [SerializeField] public Sprite buttonImage;
     public KeyCode continueButton = KeyCode.Escape;
 
+    [Header("Check for same Tutorial")]
+    [SerializeField] bool isButtonTutorial = false;
+
+
 
     private void Start()
     {
@@ -46,6 +50,7 @@ public class Tutorial : MonoBehaviour
         {
             log_file = FindObjectOfType<Use_Log_File>();
         }
+
     }
     private void Update()
     {
@@ -55,6 +60,11 @@ public class Tutorial : MonoBehaviour
             {
                 EndTutorial();
             }
+        }
+
+        if (FindObjectOfType<ButtonTutorialCheck>().buttonTutorial)
+        {
+            SkipTutorial();
         }
         
     }
@@ -76,7 +86,12 @@ public class Tutorial : MonoBehaviour
         {
             return;
         }
-        tutorialExecTimer += Time.deltaTime;
+        
+        if(tutorialExecTimer < tutorialExecTime)
+        {
+            tutorialExecTimer += Time.deltaTime;
+        }
+
         if ((tutorialExecTimer >= tutorialExecTime) && !tutorialStarted && pm.grounded)
         {
             StartTutorial();
@@ -97,6 +112,11 @@ public class Tutorial : MonoBehaviour
 
     private void StartTutorial()
     {
+        if (isButtonTutorial)
+        {
+            FindObjectOfType<ButtonTutorialCheck>().buttonTutorial = true;
+        }
+        
         tutorialStarted = true;
         inTutorial = true;
         popUpSystem.PopUp(tutorialTitel,tutorialText,useImage);

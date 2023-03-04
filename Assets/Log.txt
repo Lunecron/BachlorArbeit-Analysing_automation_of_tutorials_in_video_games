@@ -1,222 +1,30 @@
-Login date: 27.01.2023 14:56:41
-Total_Time:24,77529
-Login date: 27.01.2023 16:09:39
-Total_Time:16,44718
-Login date: 27.01.2023 16:19:06
-Total_Time:10,37753
-Login date: 27.01.2023 16:19:57
-Total_Time:30,79614
-Login date: 27.02.2023 10:25:06
-Total_Time:0
-Login date: 27.02.2023 10:46:02
-Total_Time:0
-Login date: 27.02.2023 10:47:07
-Total_Time:0
-Login date: 27.02.2023 10:47:24
-Total_Time:0
-Login date: 27.02.2023 11:18:30
-Total_Time:0
-Login date: 27.02.2023 11:21:10
-Total_Time:0
-Login date: 27.02.2023 11:24:18
-Total_Time:0
-Login date: 27.02.2023 11:28:27
-Total_Time:0
-Login date: 27.02.2023 11:29:33
-Total_Time:13,33289
-Login date: 27.02.2023 11:32:39
-Total_Time:1,700361
-Login date: 27.02.2023 11:33:07
-Total_Time:22,27478
-Login date: 01.03.2023 12:22:43
-Total_Time:5,958054
-Login date: 01.03.2023 12:23:57
-Total_Time:7,987214
-Login date: 01.03.2023 12:30:00
-Total_Time:59,51917
-Login date: 04.03.2023 12:45:07
-Total_Time:29,20912
-Login date: 04.03.2023 13:01:05
-Total_Time:11,78188
-Login date: 04.03.2023 13:02:53
-Total_Time:19,84613
-Login date: 04.03.2023 13:10:28
-Total_Time:16,00023
-Login date: 04.03.2023 13:13:52
-Total_Time:24,48564
-Login date: 04.03.2023 13:17:04
-Total_Time:18,07478
-Login date: 04.03.2023 13:19:07
-Total_Time:55,2618
-Login date: 04.03.2023 13:30:35
-Total_Time:13,51787
-Login date: 04.03.2023 13:33:17
-Total_Time:54,86474
-Login date: 04.03.2023 13:39:30
-Total_Time:0
-Login date: 04.03.2023 13:39:43
-Total_Time:0
-Login date: 04.03.2023 13:41:10
-Total_Time:0
-Login date: 04.03.2023 13:42:03
-Total_Time:6,708812
-Login date: 04.03.2023 13:45:47
-Total_Time:0
-Login date: 04.03.2023 14:14:19
-Total_Time:49,36274
-Login date: 04.03.2023 14:15:57
-Total_Time:15,96103
-Login date: 04.03.2023 14:16:58
-Total_Time:10,5199
-Login date: 04.03.2023 14:20:25
-Total_Time:34,76168
-Login date: 04.03.2023 14:21:53
-Total_Time:21,41695
-Login date: 04.03.2023 14:27:27
-Total_Time:49,40971
-Login date: 04.03.2023 14:30:29
-Total_Time:17,82779
-Login date: 04.03.2023 14:31:17
-Total_Time:25,05958
-Login date: 04.03.2023 14:32:07
-Total_Time:43,86835
-Login date: 04.03.2023 14:35:00
-Total_Time:32,63455
-Login date: 04.03.2023 14:43:40
-Total_Time:47,40604
-Login date: 04.03.2023 14:45:53
-Total_Time:36,41331
-Login date: 04.03.2023 14:48:18
-Total_Time:0
-Login date: 04.03.2023 14:48:47
-Total_Time:0
-Login date: 04.03.2023 14:50:31
-Total_Time:22,537
-Login date: 04.03.2023 14:51:05
-Total_Time:17,46077
-Login date: 04.03.2023 14:53:20
-Total_Time:11,84282
-Login date: 04.03.2023 14:53:50
-Total_Time:16,72973
-Login date: 04.03.2023 14:56:38
-Total_Time:17,66236
-Login date: 04.03.2023 14:59:03
-Total_Time:16,90161
-Login date: 04.03.2023 15:02:45
-Total_Time:13,12298
-Login date: 04.03.2023 15:04:11
-Total_Time:17,52332
-Login date: 04.03.2023 15:05:10
-Total_Time:17,19321
-Login date: 04.03.2023 15:05:42
-Total_Time:21,92522
-Login date: 04.03.2023 15:08:19
-Total_Time:15,20099
-Login date: 04.03.2023 15:08:50
-Total_Time:17,67687
-Login date: 04.03.2023 15:09:38
-Total_Time:0
-Login date: 04.03.2023 15:10:02
-Total_Time:73,00211
-Login date: 04.03.2023 15:11:24
-Total_Time:26,58722
-Login date: 04.03.2023 15:12:57
-Total_Time:20,19316
-Login date: 04.03.2023 15:17:11
-Total_Time:42,06271
-Login date: 04.03.2023 15:18:59
-Total_Time:47,64386
-Login date: 04.03.2023 15:20:12
-Total_Time:18,70692
-Login date: 04.03.2023 15:20:38
-Total_Time:24,97189
-Login date: 04.03.2023 15:23:14
-Total_Time:38,04643
-Login date: 04.03.2023 15:25:12
-Total_Time:80,51416
-Login date: 04.03.2023 15:31:14
-Total_Time:3,722701
-Login date: 04.03.2023 15:31:43
-Total_Time:28,3718
-Login date: 04.03.2023 15:32:28
-Room_3_Timer:18,78004
-Room_3_Timer_Deaths:0
-Total_Time:32,29066
-Login date: 04.03.2023 15:39:45
-Total_Time:80,53055
-Login date: 04.03.2023 15:47:58
-Total_Time:33,71682
-Login date: 04.03.2023 15:49:22
-Total_Time:32,15107
-Login date: 04.03.2023 15:50:22
-Total_Time:10,18812
-Login date: 04.03.2023 15:52:09
-Total_Time:11,92279
-Login date: 04.03.2023 15:54:30
-Total_Time:51,08594
-Login date: 04.03.2023 15:58:24
-Total_Time:33,72491
-Login date: 04.03.2023 16:01:30
-Room_2_Timer:19,23872
-Room_2_Timer_Deaths:4
-Total_Time:0
-Login date: 04.03.2023 16:39:03
-Total_Time:47,9745
-Login date: 04.03.2023 16:44:26
-Total_Time:16,97151
-Login date: 04.03.2023 16:44:53
-Total_Time:13,76941
-Login date: 04.03.2023 16:45:16
-Total_Time:16,02903
-Login date: 04.03.2023 16:54:51
-Total_Time:29,95673
-Login date: 04.03.2023 16:59:59
-Total_Time:64,4249
-Login date: 04.03.2023 17:02:01
-Total_Time:0
-Login date: 04.03.2023 17:02:11
-Room_1_Timer:32,85905
-Room_1_Timer_Deaths:1
-Total_Time:43,10562
-Login date: 04.03.2023 17:03:32
-Room_1_Timer:34,70132
-Room_1_Timer_Deaths:0
-Room_2_Timer:13,31912
-Room_2_Timer_Deaths:0
-Room_3_Timer:20,59963
-Room_3_Timer_Deaths:4
-Total_Time:183,3625
-Login date: 04.03.2023 17:18:03
-Total_Time:16,1474
-Login date: 04.03.2023 17:18:31
-Total_Time:15,70907
-Login date: 04.03.2023 17:22:28
-Total_Time:20,53596
-Login date: 04.03.2023 17:23:00
-Room_4_Timer:56,64028
-Room_4_Timer_Deaths:1
-Total_Time:93,90533
-Login date: 04.03.2023 17:26:47
-Total_Time:20,22771
-Login date: 04.03.2023 17:27:37
-Total_Time:4,310765
-Login date: 04.03.2023 17:27:51
-Room_4_Timer:38,40011
-Room_4_Timer_Deaths:1
-Total_Time:93,1318
-Login date: 04.03.2023 17:29:38
-Total_Time:3,22192
-Login date: 04.03.2023 17:42:38
-Total_Time:24,76737
-Login date: 04.03.2023 17:44:19
-Total_Time:34,53639
-Login date: 04.03.2023 17:47:44
-Total_Time:27,92859
-Login date: 04.03.2023 17:54:16
-Total_Time:0
-Login date: 04.03.2023 17:56:06
-Total_Time:0
-Login date: 04.03.2023 17:57:15
-Total_Time:0,640644
-Login date: 04.03.2023 17:58:56
-Total_Time:0
+
+Room_4_Timer:5,561707
+
+Room_3_Timer:8,639169
+
+Room_2_Timer:9,799967
+
+Room_1_Timer:17,25987
+Login date: 04.03.2023 21:41:37
+Room_4_Timer:5,320366
+Room_4_Deaths:0
+Room_3_Timer:10,03957
+Room_3_Deaths:0
+Total_Time:40,13134
+Login date: 04.03.2023 21:43:19
+Room_4_Timer:5,381846
+Room_4_Deaths:0
+Room_3_Timer:13,19984
+Room_3_Deaths:0
+Total_Time:60,27239
+Login date: 04.03.2023 21:47:08
+Room_4_Timer:19,73657
+Room_4_Deaths:1
+Room_3_Timer:25,91976
+Room_3_Deaths:0
+Room_1_Timer:17,43872
+Room_1_Deaths:0
+Total_Time:105,4154
+Login date: 04.03.2023 21:50:14
+Total_Time:37,45076

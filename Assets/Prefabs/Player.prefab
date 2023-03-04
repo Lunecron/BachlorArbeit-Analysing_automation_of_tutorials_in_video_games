@@ -248,7 +248,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 13312
   wallRunForce: 200
-  wallClimbSpeed: 4
+  wallClimbSpeed: 3
   maxWallRunTime: 5
   wallRunTimer: 0
   minWallRunSpeed: 1
@@ -376,6 +376,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2356786861771534537}
+  - component: {fileID: 735949160}
   m_Layer: 0
   m_Name: Orientation
   m_TagString: Untagged
@@ -398,3 +399,15 @@ Transform:
   m_Father: {fileID: 2356786861611827498}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &735949160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2356786861771534550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 183830a7c309d82478cccc541f099c72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

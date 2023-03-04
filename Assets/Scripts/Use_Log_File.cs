@@ -61,7 +61,8 @@ public class Use_Log_File : MonoBehaviour
     public void LogTime(string name, float time)
     {
         File.AppendAllText(path,name + ":" + time + "\n");
-        LogDeath(name + "_Deaths",deathcounter);
+        int i = name.IndexOf('_',6);
+        LogDeath(name.Substring(0,i) + "_Deaths",deathcounter);
     }
     public void LogDeath(string name, int value)
     {

@@ -47,3 +47,5 @@ MonoBehaviour:
   popUpBox: {fileID: 0}
   popUpAnimator: {fileID: 0}
   popUpText: {fileID: 0}
+  popUpTitel: {fileID: 0}
+  button_image: {fileID: 0}
