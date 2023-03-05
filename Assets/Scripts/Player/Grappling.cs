@@ -12,6 +12,8 @@ public class Grappling : MonoBehaviour
     public LayerMask whatIsGrappleable;
     public LineRenderer lineRenderer;
 
+    private LayerMask allLayer = -1;
+
     [Header("Grappling")]
     public float grappleDistance;
     public float grappleDelayTime;
@@ -32,6 +34,10 @@ public class Grappling : MonoBehaviour
 
     private bool grappling;
 
+    private void Awake()
+    {
+        
+    }
 
     private void Start()
     {
@@ -80,7 +86,7 @@ public class Grappling : MonoBehaviour
         }
 
        RaycastHit hit;
-       if (Physics.Raycast(cam.position, cam.forward, out hit, grappleDistance, whatIsGrappleable) && (((1 << hit.collider.gameObject.layer) & whatIsGrappleable) != 0))
+        if (Physics.Raycast(cam.position, cam.forward, out hit, grappleDistance, allLayer, QueryTriggerInteraction.Ignore) && (((1 << hit.collider.gameObject.layer) & whatIsGrappleable) != 0))
        {
                 //pm.freeze = true;
                 grappling = true;

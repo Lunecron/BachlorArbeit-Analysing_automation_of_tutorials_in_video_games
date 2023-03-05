@@ -11,6 +11,7 @@ public class Crosshair : MonoBehaviour
     public Transform cam;
     private LayerMask whatIsGrappleable;
     private LayerMask whatIsSwingable;
+    private LayerMask allLayer = -1;
     private float grappleDistance;
     private float swingDistance;
 
@@ -32,7 +33,7 @@ public class Crosshair : MonoBehaviour
         swingDistance = player.GetComponent<Swinging>().maxSwingDistance;
     }
 
-    private void Update()
+    private void LateUpdate()
     {
         CheckForGrappableWall();
         
@@ -41,7 +42,7 @@ public class Crosshair : MonoBehaviour
     private void CheckForGrappableWall()
     {
         RaycastHit hit;
-        if(Physics.Raycast(cam.position , cam.forward , out hit ,grappleDistance ) && (((1 << hit.collider.gameObject.layer) & whatIsGrappleable) != 0))
+        if(Physics.Raycast(cam.position , cam.forward , out hit , grappleDistance,allLayer,QueryTriggerInteraction.Ignore) && (((1 << hit.collider.gameObject.layer) & whatIsGrappleable) != 0))
         {
                 foreach (Image crosshairImage in crosshairImages)
                 {
@@ -49,7 +50,7 @@ public class Crosshair : MonoBehaviour
                 }
 
         }
-        else if (Physics.Raycast(cam.position, cam.forward, out hit, swingDistance) && (((1 << hit.collider.gameObject.layer) & whatIsSwingable) != 0))
+        else if (Physics.Raycast(cam.position, cam.forward, out hit, swingDistance, allLayer, QueryTriggerInteraction.Ignore) && (((1 << hit.collider.gameObject.layer) & whatIsSwingable) != 0))
         {
                 foreach (Image crosshairImage in crosshairImages)
                 {

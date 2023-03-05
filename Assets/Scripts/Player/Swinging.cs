@@ -13,6 +13,7 @@ public class Swinging : MonoBehaviour
     public Transform cam;
     public Transform player;
     public LayerMask whatIsGrappleable;
+    private LayerMask allLayer = -1;
     public PlayerMovement pm;
 
     [Header("Swinging")]
@@ -81,9 +82,8 @@ public class Swinging : MonoBehaviour
         }
         
         RaycastHit hit;
-        if(Physics.Raycast(cam.position,cam.forward , out hit , maxSwingDistance))
+        if(Physics.Raycast(cam.position,cam.forward , out hit , maxSwingDistance, allLayer, QueryTriggerInteraction.Ignore))
         {
-
             if (((1 << hit.collider.gameObject.layer) & whatIsGrappleable) != 0)
             {
                 //It matched one

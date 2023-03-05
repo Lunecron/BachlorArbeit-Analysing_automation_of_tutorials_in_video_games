@@ -24726,7 +24726,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh34734
+  m_Name: pb_Mesh34776
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -37348,6 +37348,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 88217208}
+    - target: {fileID: 1460979333664082843, guid: 58a12c8196d10f44d9da4b24b446710d, type: 3}
+      propertyPath: allLayer.m_Bits
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1460979333723449266, guid: 58a12c8196d10f44d9da4b24b446710d, type: 3}
       propertyPath: m_RootOrder
       value: 4
