@@ -159,7 +159,7 @@ public class Swinging : MonoBehaviour
         // extend cable
         if (Input.GetKey(KeyCode.S))
         {
-            rb.AddForce(orientation.forward * horizontalThrustForce * Time.deltaTime);
+            rb.AddForce(-orientation.forward * horizontalThrustForce * Time.deltaTime);
 
             //float extendedDistanceFromPoint = Vector3.Distance(transform.position, swingPoint) + extendCableSpeed;
 

@@ -6,7 +6,6 @@ using DG.Tweening;
 public class PlayerCam : MonoBehaviour
 {
     //Handle Mouse Movement and LockMouse
-    [SerializeField] bool test = false;
 
     public float sensX;
     public float sensY;
