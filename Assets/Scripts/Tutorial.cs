@@ -60,12 +60,14 @@ public class Tutorial : MonoBehaviour
             {
                 EndTutorial();
             }
+
+            if (FindObjectOfType<ButtonTutorialCheck>().buttonTutorial && !tutorialStarted)
+            {
+                SkipTutorial();
+            }
         }
 
-        if (FindObjectOfType<ButtonTutorialCheck>().buttonTutorial)
-        {
-            SkipTutorial();
-        }
+       
         
     }
 
@@ -96,11 +98,11 @@ public class Tutorial : MonoBehaviour
         {
             StartTutorial();
         }
-        else if (PlayerStateReached(stateToCheck) && checkState)
+        else if (PlayerStateReached(stateToCheck) && !tutorialStarted && checkState)
         {
             SkipTutorial();
         }
-        else if (BoolToCheck(boolToCheck) && checkBool)
+        else if (BoolToCheck(boolToCheck) && !tutorialStarted && checkBool)
         {
             SkipTutorial();
         }
@@ -116,6 +118,8 @@ public class Tutorial : MonoBehaviour
         {
             FindObjectOfType<ButtonTutorialCheck>().buttonTutorial = true;
         }
+
+        log_file.LogString(gameObject.name, "Started");
         
         tutorialStarted = true;
         inTutorial = true;
@@ -230,6 +234,7 @@ public class Tutorial : MonoBehaviour
 
     private void SkipTutorial()
     {
+        log_file.LogString(gameObject.name, "Skiped");
         tutorialStarted = true;
     }
 

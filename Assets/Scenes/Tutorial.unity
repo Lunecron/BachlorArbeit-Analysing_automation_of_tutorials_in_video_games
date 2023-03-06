@@ -27609,6 +27609,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3628890595549815364, guid: 526b4ca12ca8df149b24b2ed257c8bb8, type: 3}
+      propertyPath: checkBool
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628890595549815364, guid: 526b4ca12ca8df149b24b2ed257c8bb8, type: 3}
+      propertyPath: checkState
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3628890595549815364, guid: 526b4ca12ca8df149b24b2ed257c8bb8, type: 3}
       propertyPath: popUpSystem
       value: 
       objectReference: {fileID: 159813946}
