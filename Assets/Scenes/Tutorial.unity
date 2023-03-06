@@ -54015,7 +54015,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3628890595549815364, guid: 526b4ca12ca8df149b24b2ed257c8bb8, type: 3}
       propertyPath: tutorialExecTime
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3628890595549815365, guid: 526b4ca12ca8df149b24b2ed257c8bb8, type: 3}
       propertyPath: m_RootOrder
@@ -66588,7 +66588,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3628890595549815364, guid: 526b4ca12ca8df149b24b2ed257c8bb8, type: 3}
       propertyPath: tutorialExecTime
-      value: 7
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3628890595549815365, guid: 526b4ca12ca8df149b24b2ed257c8bb8, type: 3}
       propertyPath: m_RootOrder

@@ -31,8 +31,7 @@ public class Use_Log_File : MonoBehaviour
     void Start()
     {
         CreateText();
-        
-        
+
     }
 
     private void Update()
