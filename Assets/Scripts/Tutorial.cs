@@ -83,8 +83,9 @@ public class Tutorial : MonoBehaviour
     {
 
         if (!tutorialStarted)
-        {
+        {            
             player.GetComponent<CheckForTutorial>().SetActiveTutorial(gameObject.GetComponent<Tutorial>());
+            
         }
         
         
@@ -99,13 +100,9 @@ public class Tutorial : MonoBehaviour
 
         inRange = true;
 
-        gameMenu.EnableHelpButton();
-
        
         if (!tutorialStarted)
         {
-            
-
             if (tutorialExecTimer < tutorialExecTime)
             {
                 tutorialExecTimer += Time.deltaTime;
@@ -179,7 +176,8 @@ public class Tutorial : MonoBehaviour
         Cursor.visible = false;
         StartCoroutine(EnableGameMenuAfterDelay(true,1f));
         Invoke(nameof(StopMyCoroutine),1f);
-        
+
+        gameMenu.EnableHelpButton();
     }
 
     private void SetButtonImage()
@@ -263,6 +261,8 @@ public class Tutorial : MonoBehaviour
     {
         log_file.LogString(gameObject.name, "Skiped");
         tutorialStarted = true;
+
+        gameMenu.EnableHelpButton();
     }
 
     public void increaseResets(int amount)
