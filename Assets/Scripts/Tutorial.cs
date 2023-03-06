@@ -34,7 +34,7 @@ public class Tutorial : MonoBehaviour
     [SerializeField] public string tutorialText;
     [SerializeField] public bool useImage = false;
     [SerializeField] public Sprite buttonImage;
-    public KeyCode continueButton = KeyCode.Escape;
+    public KeyCode continueButton = KeyCode.Return;
 
     [Header("Check for same Tutorial")]
     [SerializeField] bool isButtonTutorial = false;

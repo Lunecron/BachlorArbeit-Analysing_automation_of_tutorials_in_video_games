@@ -114,3 +114,7 @@ Login date: 05.03.2023 20:51:40
 Room_2_Timer:81,87952
 Room_2_Deaths:1
 Total_Time:95,25649
+Login date: 06.03.2023 18:01:50
+Total_Time:19,65498
+Login date: 06.03.2023 18:42:24
+Total_Time:8,258538
