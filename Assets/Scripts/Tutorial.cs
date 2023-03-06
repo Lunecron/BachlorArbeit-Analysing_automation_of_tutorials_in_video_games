@@ -20,6 +20,7 @@ public class Tutorial : MonoBehaviour
 
     private bool tutorialStarted = false;
     private bool inTutorial = false;
+    private bool inRange = false;
 
     [Header("Check for")]
     public bool checkState = false;
@@ -39,6 +40,8 @@ public class Tutorial : MonoBehaviour
     [Header("Check for same Tutorial")]
     [SerializeField] bool isButtonTutorial = false;
 
+    [Header("HelpButton")]
+    public KeyCode helpButtonKey = KeyCode.H;
 
 
     private void Start()
@@ -67,8 +70,13 @@ public class Tutorial : MonoBehaviour
             }
         }
 
-       
-        
+        if (inRange && Input.GetKeyDown(helpButtonKey) && pm.grounded && !inTutorial)
+        {
+            StartTutorial();
+        }
+
+
+
     }
 
     private void OnTriggerEnter(Collider other)
@@ -88,32 +96,51 @@ public class Tutorial : MonoBehaviour
         {
             return;
         }
-        
-        if(tutorialExecTimer < tutorialExecTime)
-        {
-            tutorialExecTimer += Time.deltaTime;
-        }
 
-        if ((tutorialExecTimer >= tutorialExecTime) && !tutorialStarted && pm.grounded)
+        inRange = true;
+
+        gameMenu.EnableHelpButton();
+
+       
+        if (!tutorialStarted)
         {
-            StartTutorial();
+            
+
+            if (tutorialExecTimer < tutorialExecTime)
+            {
+                tutorialExecTimer += Time.deltaTime;
+            }
+
+            if ((tutorialExecTimer >= tutorialExecTime) && pm.grounded)
+            {
+                StartTutorial();
+            }
+            else if (PlayerStateReached(stateToCheck) && checkState)
+            {
+                SkipTutorial();
+            }
+            else if (BoolToCheck(boolToCheck) && checkBool)
+            {
+                SkipTutorial();
+            }
+            else if (resets >= maxResetsTillTut && pm.grounded)
+            {
+                StartTutorial();
+            }
         }
-        else if (PlayerStateReached(stateToCheck) && !tutorialStarted && checkState)
-        {
-            SkipTutorial();
-        }
-        else if (BoolToCheck(boolToCheck) && !tutorialStarted && checkBool)
-        {
-            SkipTutorial();
-        }
-        else if(resets >= maxResetsTillTut && !tutorialStarted && pm.grounded)
-        {
-            StartTutorial();
-        }
+        
+        
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        inRange = false;
     }
 
     private void StartTutorial()
     {
+        gameMenu.DisableHelpButton();
+
         if (isButtonTutorial)
         {
             FindObjectOfType<ButtonTutorialCheck>().buttonTutorial = true;

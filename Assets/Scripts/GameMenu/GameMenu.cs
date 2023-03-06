@@ -13,6 +13,8 @@ public class GameMenu : MonoBehaviour
     private bool gameMenuEnable = true;
 
     public GameObject pauseMenuUI;
+    [SerializeField] private GameObject helpButton;
+    private bool helpButtonEnabled = false;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && gameMenuEnable)
@@ -26,6 +28,7 @@ public class GameMenu : MonoBehaviour
                 Pause();
             }
         }
+
     }
 
     public void Pause()
@@ -67,6 +70,23 @@ public class GameMenu : MonoBehaviour
         //Add after creating Menu scene
 
         //SceneManager.LoadScene("Menu");
+    }
+
+    public void EnableHelpButton()
+    {
+        helpButton.SetActive(true);
+        helpButtonEnabled = true;
+    }
+
+    public void DisableHelpButton()
+    {
+        helpButton.SetActive(false);
+        helpButtonEnabled = false;
+    }
+
+    public bool GetHelpButtonState()
+    {
+        return helpButtonEnabled;
     }
 
     public void EnableGameMenu(bool value)
