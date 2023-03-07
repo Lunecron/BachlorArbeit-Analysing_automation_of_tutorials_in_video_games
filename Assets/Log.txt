@@ -1,12 +1,19 @@
-Total_Time:4,384961
-Login date: 06.03.2023 20:25:11
+Login date: 07.03.2023 09:27:39
+Tutorial Zone Lobby:Skiped
 Tutorial Zone Lobby 2:Skiped
+Tutorial Zone 2.2:Skiped
+Total_Time:24,5931
+Login date: 07.03.2023 09:28:22
 Tutorial Zone Lobby:Skiped
-Tutorial Zone 4.1:Started
-Total_Time:5,860619
-Login date: 06.03.2023 20:25:56
+Tutorial Zone Lobby 2:Skiped
+Tutorial Zone 2.2:Skiped
+Total_Time:37,9706
+Login date: 07.03.2023 09:29:19
 Tutorial Zone Lobby:Skiped
-Tutorial Zone Lobby 2:Started
-Tutorial Zone Lobby:Started
-Tutorial Zone 1.1:Skiped
-Total_Time:20,57749
+Tutorial Zone Lobby 2:Skiped
+Total_Time:7,892911
+Login date: 07.03.2023 09:30:08
+Tutorial Zone Lobby:Skiped
+Tutorial Zone Lobby 2:Skiped
+Tutorial Zone 2.2:Skiped
+Total_Time:29,66172
