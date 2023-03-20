@@ -259,7 +259,7 @@ public class Tutorial : MonoBehaviour
 
     private void SkipTutorial()
     {
-        log_file.LogString(gameObject.name, "Skiped");
+        log_file.LogString(gameObject.name, "Skipped");
         tutorialStarted = true;
 
         gameMenu.EnableHelpButton();

@@ -17,3 +17,95 @@ Tutorial Zone Lobby:Skiped
 Tutorial Zone Lobby 2:Skiped
 Tutorial Zone 2.2:Skiped
 Total_Time:29,66172
+Login date: 07.03.2023 09:34:20
+Tutorial Zone Lobby:Skiped
+Tutorial Zone Lobby 2:Started
+Tutorial Zone Lobby:Started
+Tutorial Zone 4.1:Skiped
+Tutorial Zone 4.2:Skiped
+Tutorial Zone 4.3:Skiped
+Tutorial Zone 4.4:Started
+Tutorial Zone Lobby 2:Started
+Tutorial Zone 1.1:Skiped
+Tutorial Zone 1.3:Skiped
+Room_1_Timer:25,7013
+Room_1_Deaths:0
+Total_Time:99,33056
+Login date: 07.03.2023 09:37:30
+Tutorial Zone Lobby:Skiped
+Tutorial Zone Lobby 2:Skiped
+Total_Time:25,01769
+Login date: 20.03.2023 18:52:21
+Tutorial Zone Lobby:Skipped
+Tutorial Zone Lobby 2:Skipped
+Total_Time:7,866817
+Login date: 20.03.2023 18:52:59
+Tutorial Zone Lobby:Skipped
+Tutorial Zone Lobby 2:Skipped
+Total_Time:1,257777
+Login date: 20.03.2023 18:53:20
+Tutorial Zone Lobby:Skipped
+Tutorial Zone Lobby 2:Skipped
+Total_Time:3,062235
+Login date: 20.03.2023 18:53:58
+Tutorial Zone Lobby:Skipped
+Total_Time:0
+Login date: 20.03.2023 18:54:20
+Total_Time:0
+Login date: 20.03.2023 18:54:29
+Tutorial Zone Lobby:Skipped
+Tutorial Zone Lobby 2:Skipped
+Total_Time:2,044674
+Login date: 20.03.2023 18:54:46
+Tutorial Zone Lobby:Skipped
+Tutorial Zone Lobby 2:Skipped
+Tutorial Zone Lobby 2:Started
+Total_Time:3,528289
+Login date: 20.03.2023 18:56:24
+Tutorial Zone Lobby:Skipped
+Tutorial Zone Lobby 2:Started
+Total_Time:11,50659
+Login date: 20.03.2023 18:58:49
+Tutorial Zone Lobby:Started
+Total_Time:0
+Login date: 20.03.2023 19:00:15
+Tutorial Zone Lobby:Skipped
+Tutorial Zone Lobby 2:Started
+Total_Time:2,787677
+Login date: 20.03.2023 19:00:48
+Tutorial Zone Lobby:Skipped
+Tutorial Zone Lobby 2:Started
+Total_Time:15,58401
+Login date: 20.03.2023 19:03:24
+Tutorial Zone Lobby:Skipped
+Total_Time:10,14524
+Login date: 20.03.2023 19:04:35
+Total_Time:0
+Login date: 20.03.2023 19:07:54
+Total_Time:0
+Login date: 20.03.2023 19:08:21
+Tutorial Zone Lobby:Skipped
+Total_Time:7,536549
+Login date: 20.03.2023 19:09:20
+Total_Time:0
+Login date: 20.03.2023 19:10:26
+Total_Time:0
+Login date: 20.03.2023 19:11:31
+Total_Time:0
+Login date: 20.03.2023 19:14:30
+Total_Time:0
+Login date: 20.03.2023 19:14:55
+Tutorial Zone Lobby:Started
+Total_Time:0
+Login date: 20.03.2023 19:17:51
+Tutorial Zone Lobby:Skipped
+Total_Time:9,477133
+Login date: 20.03.2023 19:18:24
+Tutorial Zone Lobby:Started
+Tutorial Zone Lobby 2:Skipped
+Total_Time:48,14251
+Login date: 20.03.2023 19:19:35
+Tutorial Zone Lobby:Skipped
+Tutorial Zone Lobby 2:Skipped
+Tutorial Zone 1.1:Skipped
+Total_Time:38,06521
