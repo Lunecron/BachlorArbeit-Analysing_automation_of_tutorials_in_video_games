@@ -64,10 +64,12 @@ public class Tutorial : MonoBehaviour
                 EndTutorial();
             }
 
-            if (FindObjectOfType<ButtonTutorialCheck>().buttonTutorial && !tutorialStarted)
-            {
-                SkipTutorial();
-            }
+            
+        }
+
+        if (FindObjectOfType<ButtonTutorialCheck>().buttonTutorial && !tutorialStarted)
+        {
+            SkipTutorial();
         }
 
         if (inRange && Input.GetKeyDown(helpButtonKey) && pm.grounded && !inTutorial)
@@ -87,8 +89,13 @@ public class Tutorial : MonoBehaviour
             player.GetComponent<CheckForTutorial>().SetActiveTutorial(gameObject.GetComponent<Tutorial>());
             
         }
-        
-        
+
+        if (isButtonTutorial)
+        {
+            FindObjectOfType<ButtonTutorialCheck>().buttonTutorial = true;
+        }
+
+
     }
 
     private void OnTriggerStay(Collider other)
@@ -136,12 +143,8 @@ public class Tutorial : MonoBehaviour
 
     private void StartTutorial()
     {
-        gameMenu.DisableHelpButton();
 
-        if (isButtonTutorial)
-        {
-            FindObjectOfType<ButtonTutorialCheck>().buttonTutorial = true;
-        }
+        gameMenu.DisableHelpButton();
 
         log_file.LogString(gameObject.name, "Started");
         
