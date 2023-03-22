@@ -67,7 +67,7 @@ public class Tutorial : MonoBehaviour
             
         }
 
-        if (FindObjectOfType<ButtonTutorialCheck>().buttonTutorial && !tutorialStarted)
+        if (FindObjectOfType<ButtonTutorialCheck>().buttonTutorial && isButtonTutorial &&!tutorialStarted)
         {
             SkipTutorial();
         }
