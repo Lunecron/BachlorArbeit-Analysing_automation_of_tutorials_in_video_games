@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5759829381341750300}
   - component: {fileID: 5759829381341750303}
+  - component: {fileID: 1935502315}
+  - component: {fileID: 1935502316}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -49,3 +51,34 @@ MonoBehaviour:
   popUpText: {fileID: 0}
   popUpTitel: {fileID: 0}
   button_image: {fileID: 0}
+--- !u!114 &1935502315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5759829381341750301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 753d4618a04254f4db56c204cc168541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveDirectory: Settings
+  saveName: settings
+--- !u!114 &1935502316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5759829381341750301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf1276d0abc93d40a61add0ea5cc40f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveName: settings
+  directorName: Settings
+  saveGameData:
+    mouseX: 0
+    mouseY: 0

@@ -3446,6 +3446,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: SaveGame, Assembly-CSharp
+        m_MethodName: SaveToFile
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1685384076
 GameObject:
   m_ObjectHideFlags: 0
@@ -3752,8 +3764,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e4a8c47bdf3c374f8bde84b039eeaff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  glowTime: 3
-  glowInterval: 3
+  glowTime: 2
+  glowInterval: 10
   animationSpeed: 1
   glowTexture: {fileID: 1699974152}
 --- !u!1 &1845010725

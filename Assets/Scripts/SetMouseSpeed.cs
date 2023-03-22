@@ -16,6 +16,11 @@ public class SetMouseSpeed : MonoBehaviour
         cam = FindObjectOfType<PlayerCam>();
         UpdateSlider();
         UpdateInputFields();
+        GameLoader gameLoader = FindObjectOfType<GameLoader>();
+        if (gameLoader != null)
+        {
+            gameLoader.LoadFromFile();
+        }
     }
 
     public void SetYSense(string newSense)
