@@ -90,12 +90,6 @@ public class Tutorial : MonoBehaviour
             
         }
 
-        if (isButtonTutorial)
-        {
-            FindObjectOfType<ButtonTutorialCheck>().buttonTutorial = true;
-        }
-
-
     }
 
     private void OnTriggerStay(Collider other)
@@ -143,6 +137,10 @@ public class Tutorial : MonoBehaviour
 
     private void StartTutorial()
     {
+        if (isButtonTutorial)
+        {
+            FindObjectOfType<ButtonTutorialCheck>().buttonTutorial = true;
+        }
 
         gameMenu.DisableHelpButton();
 

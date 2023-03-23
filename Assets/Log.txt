@@ -1,0 +1,23 @@
+Login date: 22.03.2023 23:01:08
+Tutorial Zone Lobby:Skipped
+Tutorial Zone Lobby 2:Skipped
+Tutorial Zone 2.2:Skipped
+Tutorial Zone 2.2:Started
+Tutorial Zone 2.3:Started
+Tutorial Zone 3.4:Skipped
+Tutorial Zone 2.4:Skipped
+Tutorial Zone 4.4:Skipped
+Tutorial Zone 1.4:Skipped
+Total_Time:36,29047
+Login date: 22.03.2023 23:03:19
+Tutorial Zone Lobby:Skipped
+Tutorial Zone Lobby 2:Skipped
+Tutorial Zone 2.1:Started
+Tutorial Zone 2.2:Skipped
+Tutorial Zone 3.4:Skipped
+Tutorial Zone 2.4:Skipped
+Tutorial Zone 4.4:Skipped
+Tutorial Zone 1.4:Skipped
+Room_2_Timer:14,0388
+Room_2_Deaths:0
+Total_Time:16,79378
