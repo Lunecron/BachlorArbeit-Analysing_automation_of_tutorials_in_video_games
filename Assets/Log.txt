@@ -21,3 +21,29 @@ Tutorial Zone 1.4:Skipped
 Room_2_Timer:14,0388
 Room_2_Deaths:0
 Total_Time:16,79378
+Login date: 23.03.2023 13:35:13
+Total_Time:0
+Login date: 23.03.2023 14:14:38
+Total_Time:71,97593
+Login date: 23.03.2023 20:25:18
+Total_Time:271,0904
+Login date: 24.03.2023 15:12:52
+Total_Time:38,53871
+Login date: 24.03.2023 15:13:57
+Total_Time:42,1071
+Login date: 24.03.2023 15:14:54
+Total_Time:47,46272
+Login date: 24.03.2023 15:15:59
+Total_Time:76,30502
+Login date: 24.03.2023 16:20:00
+Total_Time:61,3726
+Login date: 24.03.2023 16:21:38
+Total_Time:69,7439
+Login date: 24.03.2023 16:26:46
+Total_Time:0
+Login date: 24.03.2023 16:27:17
+Total_Time:0
+Login date: 24.03.2023 16:28:59
+Total_Time:0
+Login date: 24.03.2023 16:29:26
+Total_Time:0

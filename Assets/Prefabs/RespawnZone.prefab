@@ -146,7 +146,7 @@ MonoBehaviour:
   respawnZone: {fileID: 8930470143610581318}
   respawnPoint: {fileID: 8930470143751154625}
   lookDirectionWhileSpawning: {x: 0, y: 0, z: 0}
-  gizmoRadius: 5
+  gizmoRadius: 1
 --- !u!1 &8930470143443903764
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +293,7 @@ MonoBehaviour:
   respawnZone: {fileID: 8930470143610581318}
   respawnPoint: {fileID: 8930470143084077159}
   lookDirectionWhileSpawning: {x: 0, y: 0, z: 0}
-  gizmoRadius: 5
+  gizmoRadius: 1
 --- !u!1 &8930470143610581316
 GameObject:
   m_ObjectHideFlags: 0
@@ -575,7 +575,7 @@ MonoBehaviour:
   respawnZone: {fileID: 8930470143610581318}
   respawnPoint: {fileID: 8930470143443903767}
   lookDirectionWhileSpawning: {x: 0, y: 0, z: 0}
-  gizmoRadius: 5
+  gizmoRadius: 1
 --- !u!1 &8930470144303316121
 GameObject:
   m_ObjectHideFlags: 0
@@ -752,4 +752,4 @@ MonoBehaviour:
   respawnZone: {fileID: 8930470143610581318}
   respawnPoint: {fileID: 8930470143930677400}
   lookDirectionWhileSpawning: {x: 0, y: 0, z: 0}
-  gizmoRadius: 0.5
+  gizmoRadius: 1
