@@ -51,7 +51,7 @@ public class Swinging : MonoBehaviour
             coyoteTimer = coyoteTime;
             StartSwing();
         }
-        else if (Input.GetKeyUp(swingKey))
+        else if (Input.GetKeyUp(swingKey) || (!Input.GetKey(swingKey) && pm.swinging == true))
         {
             StopSwing();
         }
