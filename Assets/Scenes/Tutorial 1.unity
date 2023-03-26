@@ -34787,7 +34787,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7842166360658060805, guid: 419f200990cdb1349acc504284080ef1, type: 3}
       propertyPath: tutorialText
-      value: "halten um an W\xE4nden hoch zu rennen."
+      value: "halten w\xE4hrend du an einer Wand rennst um an h\xF6he zu gewinnen."
       objectReference: {fileID: 0}
     - target: {fileID: 7842166360658060805, guid: 419f200990cdb1349acc504284080ef1, type: 3}
       propertyPath: tutorialTitel

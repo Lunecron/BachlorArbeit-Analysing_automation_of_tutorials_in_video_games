@@ -49,3 +49,51 @@ Login date: 24.03.2023 16:29:26
 Total_Time:0
 Login date: 24.03.2023 21:42:17
 Total_Time:0
+Login date: 26.03.2023 13:11:26
+Tutorial Zone Lobby:Skipped
+Tutorial Zone Lobby 2:Skipped
+Total_Time:35,13326
+Login date: 26.03.2023 13:12:29
+Tutorial Zone Lobby:Started
+Tutorial Zone Lobby 2:Started
+Total_Time:6,820967
+Login date: 26.03.2023 13:12:43
+Tutorial Zone Lobby:Started
+Tutorial Zone Lobby 2:Started
+Total_Time:7,338368
+Login date: 26.03.2023 14:06:43
+Tutorial Zone Lobby:Skipped
+Total_Time:0,6822211
+Login date: 26.03.2023 14:07:33
+Tutorial Zone Lobby:Started
+Tutorial Zone Lobby 2:Started
+Tutorial Zone 1.1:Started
+Tutorial Zone 1.2:Started
+Tutorial Zone 1.3:Started
+Tutorial Zone 1.4:Started
+Tutorial Zone 3.4:Skipped
+Tutorial Zone 2.4:Skipped
+Tutorial Zone 4.4:Skipped
+Room_1_Timer:33,46095
+Room_1_Deaths:0
+Tutorial Zone 2.1:Started
+Tutorial Zone 2.2:Started
+Tutorial Zone 2.3:Started
+Room_2_Timer:27,22213
+Room_2_Deaths:0
+Tutorial Zone 3.1:Started
+Tutorial Zone 3.3:Started
+Room_3_Timer:16,51884
+Room_3_Deaths:0
+Tutorial Zone 4.1:Started
+Tutorial Zone 4.2:Started
+Tutorial Zone 4.3:Started
+Room_4_Timer:19,63995
+Room_4_Deaths:0
+Total_Time:117,0575
+Login date: 26.03.2023 14:11:51
+Tutorial Zone Lobby:Started
+Tutorial Zone Lobby 2:Started
+Tutorial Zone 1.1:Started
+Tutorial Zone 1.2:Started
+Total_Time:12,69636
